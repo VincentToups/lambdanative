@@ -417,24 +417,7 @@
         (let ((system (vector-ref systems i)))
           (reset-system! system)
           (loop (+ i 1))))
-       (else #t))))
-  ;; (let ((n (vector-length systems))) 
-  ;;       (let outer-loop ((count (total-entity-count)))
-  ;;         (cond 
-  ;;          ((fx= count 0)
-  ;;       	#t)
-  ;;          (else 
-  ;;       	(let loop ((i 0))
-  ;;       	  (cond 
-  ;;       	   ((fx= i n)
-  ;;       		#t)
-  ;;       	   (else
-  ;;       		;; Save the trouble of all the backtracking logic implied in deleting during traversal.
-  ;;       		(let ((entities (system-map-entities (lambda (e #!rest ignore) e) i)))
-  ;;       		  (map delete! entities)
-  ;;       		  (loop (fx+ i 1))))))
-  ;;       	(outer-loop (total-entity-count))))))
-  )
+       (else #t)))))
 
 ;; ************************************************
 ;;
