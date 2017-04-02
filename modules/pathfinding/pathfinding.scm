@@ -192,22 +192,24 @@
 	(set! node (grid-ref-walkable-only-or 
 				grid
 				x y+1))
-	(if node (set! output (cons node output)))
-
-	(set! node (grid-ref-walkable-only-or 
-				grid
-				x y-1))
-	(if node (set! output (cons node output)))
+	(if node (set! output (cons node output)))	
 
 	(set! node (grid-ref-walkable-only-or 
 				grid
 				x+1 y))
 	(if node (set! output (cons node output)))
 
-	(set! node (grid-ref-walkable-only-or 
+        (set! node (grid-ref-walkable-only-or 
 				grid
 				x-1 y))
 	(if node (set! output (cons node output)))
+
+        (set! node (grid-ref-walkable-only-or 
+				grid
+				x y-1))
+	(if node (set! output (cons node output)))
+
+	
 	output))
 
 (define open-set (make-heap* node< size-guess: (fx* 18 18)))
