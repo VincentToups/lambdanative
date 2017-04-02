@@ -50,7 +50,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 {
   static int needsinit=1;
   if (needsinit) {
-    timer = [NSTimer timerWithTimeInterval: (1.0f/20.0f) target:self selector:@selector(animTimer:) userInfo:nil repeats:YES];
+    timer = [NSTimer timerWithTimeInterval: (1.0f/60.0f) target:self selector:@selector(animTimer:) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSEventTrackingRunLoopMode];
     needsinit=0;
